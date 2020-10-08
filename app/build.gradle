@@ -24,7 +24,9 @@ android {
         dataBinding true
     }
 }
-
+repositories {
+    maven { url 'https://jitpack.io' }
+}
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.2.0'
@@ -36,4 +38,5 @@ dependencies {
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'com.github.santalu:maskara:1.0.0'
 }
