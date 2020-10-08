@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.myapplication.DupaViewData"
+            />
+
+        <import type="com.example.myapplication.ViewUtilsKt" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:ignore="HardcodedText"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="asdaksdj asjdh aksdjh aksjd"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="asdaksdj asjdh aksdjh aksjd"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="asdaksdj asjdh aksdjh aksjd"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:text="Time"
+                    />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:elevation="4dp"
+                    android:foreground="?selectableItemBackground"
+                    android:onClick="@{() -> ViewUtilsKt.requestFocusWithKeyboard(editText)}"
+                    app:cardCornerRadius="4dp"
+                    app:strokeColor="@color/focusable_background"
+                    app:strokeWidth="1dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/editText"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:alpha="0"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:onFocusChange="@{(_, hasFocus)-> cardView.setSelected(hasFocus)}"
+                        android:text="@={model.durationRaw}"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="48dp"
+                        android:padding="8dp"
+                        android:text="@{model.durationFormatted}"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="asdaksdj asjdh aksdjh aksjd"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="asdaksdj asjdh aksdjh aksjd"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="asdaksdj asjdh aksdjh aksjd"
+                />
+
+            <EditText
+                android:id="@+id/another_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@null"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences|textAutoComplete"
+                android:text="hello"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="asdaksdj asjdh aksdjh aksjd"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
