@@ -92,7 +92,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:minWidth="48dp"
-                        android:padding="8dp"
+                        android:paddingHorizontal="12dp"
+                        android:textColor="@color/focusable_text_color"
+                        android:paddingVertical="8dp"
                         android:text="@{model.durationFormatted}"
                         />
                 </com.google.android.material.card.MaterialCardView>
@@ -124,13 +126,15 @@
 
             <EditText
                 android:id="@+id/another_text"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
+                android:minHeight="50dp"
+                android:hint="Type here..."
                 android:background="@null"
                 android:imeOptions="actionDone"
                 android:inputType="textCapSentences|textAutoComplete"
-                android:text="hello"
+                android:text=""
                 />
 
             <TextView
